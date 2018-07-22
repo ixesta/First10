@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>First10</title>
+
+</head>
+
+<body>
+  <div class='title-container'>
+    <h1 class='title'>First10</h1>
+  </div>
+
+  <div class='container'>
+    <div id="arrayContainer"></div>
+    <div>
+      <button onClick="average()" class='button'>average</button>
+    </div>
+    <div id='value'></div>
+  </div>
+
+  <script>
+
+    const array = [3, 7, 'df', '3', 7, 8, 'df', 23, 6, 2, 67, 'g', '34', 12, 34, 5];
+
+    let arrayContainer = document.getElementById('arrayContainer'); // create array container 
+    // get elements from the array
+    (function getArray() {
+      array.map(arrayItem => {
+        // each on of the array elements
+        let element = document.createElement('span');
+        element.innerHTML = arrayItem;
+        // add class
+        element.classList.add("array");
+        arrayContainer.appendChild(element);
+      });
+    })();
+    // average function
+    function average() {
+      let count = 0
+      let val = array.reduce((x, y) => {
+        if (+y) {
+          count++
+          x += +y
+        }
+        return x
+      }, 0)
+      val = val / count;
+      // create element average
+      document.getElementById('value').innerHTML += val + '<br/>';
+    }
+
+  </script>
+
+</body>

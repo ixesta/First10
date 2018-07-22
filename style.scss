@@ -1,0 +1,63 @@
+$text: #f5f2dc;
+$border: #ff5729;
+$background_main: #009494;
+$background_array: #00585E;
+$background_button: #454445;
+
+body {
+	background-color: $background_main;
+}
+
+.title-container {
+	display: flex;
+	justify-content: center;
+}
+
+.title {
+	color: $text;
+	padding: 3em;
+}
+
+.container {
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+#arrayContainer {
+	display: flex;
+	justify-content: space-evenly;
+	border: .06em solid #ff5729;
+	background-color: $background_array;
+	height: 4em;
+	align-items: center;
+}
+
+.array {
+	min-width: 20px;
+	color: $text;
+}
+
+.button {
+ 	margin: 1em 0em;
+	border: .06em solid #ff5729;
+	padding: 1em;
+	font-size: 1.2em;
+	background-color: $background_button;
+	color: $text;
+}
+
+ #value {
+	color: $text;
+	padding: 2em;
+	font-size: 4em;
+}
+
+
+        
+
+
